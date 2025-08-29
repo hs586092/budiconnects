@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #050505;
+    line-height: 1.4;
+  }
+}
+
+@layer components {
+  /* Facebook-style button */
+  .fb-btn {
+    @apply px-4 py-2 rounded-fb font-medium text-fb-base transition-colors duration-200;
+  }
+
+  .fb-btn-primary {
+    @apply bg-fb-orange text-white hover:bg-fb-link-hover;
+  }
+
+  .fb-btn-secondary {
+    @apply bg-fb-gray-100 text-fb-text hover:bg-fb-gray-200;
+  }
+
+  /* Facebook-style input */
+  .fb-input {
+    @apply w-full px-3 py-2 border border-fb-border rounded-fb bg-white text-fb-text placeholder-fb-text-secondary focus:outline-none focus:border-fb-orange focus:ring-1 focus:ring-fb-orange;
+  }
+
+  /* Facebook-style card */
+  .fb-card {
+    @apply bg-white rounded-fb shadow-fb border border-fb-border;
+  }
+
+  /* Facebook-style hover effects */
+  .fb-hover {
+    @apply hover:bg-fb-hover transition-colors duration-200;
+  }
+
+  /* Facebook-style text */
+  .fb-text-primary {
+    @apply text-fb-text;
+  }
+
+  .fb-text-secondary {
+    @apply text-fb-text-secondary;
+  }
+
+  .fb-text-link {
+    @apply text-fb-link hover:text-fb-link-hover cursor-pointer;
+  }
+}
